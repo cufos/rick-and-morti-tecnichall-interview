@@ -1,6 +1,6 @@
 import Link from 'next/link'
 // components
-import { Logo } from '../logo'
+import { Logo } from '../icons/Logo'
 // styles
 import styles from './navbar.module.css'
 
@@ -11,13 +11,15 @@ export function Navbar () {
         <h1 className={styles.logo}>
           <Link href='/'>
             <a>
-              <Logo width={180} height={60} />
+              <Logo width={150} height={60} />
             </a>
           </Link>
         </h1>
         <form className={styles.form}>
           <input type='text' placeholder='Search for a character...' />
-          <button>Search</button>
+          <button>
+            Search
+          </button>
         </form>
       </div>
     </div>

@@ -1,5 +1,5 @@
 .wraper {
-  padding: 1rem 3rem;
+  padding: 1rem;
   background-color: var(--white);
   width: 100vw;
   border-bottom: 0.5rem solid var(--light-red);
@@ -14,28 +14,25 @@
 }
 
 .logo {
-  font-size: 2rem;
   padding: 0;
   margin: 0;
 }
 
-.form > * {
-  font-size: 1.4rem;
-}
-
 .form > input {
-  padding: 0.5rem;
+  padding: 0.5rem 0.2rem;
   border-radius: 1rem 0 0 1rem;
   border: 0.2rem solid var(--blue);
   outline: 0;
+  line-height: 1;
+  font-size: 1.2rem;
+  width: 9rem;
 }
 
 .form > button {
-  padding: 0.5rem;
+  padding: 0.5rem 0.2rem;
   border: 0.2rem solid var(--blue);
   border-radius: 0 1rem 1rem 0;
   background-color: var(--blue);
-  color: var(--white);
   transition: all 0.3s ease;
 }
 
@@ -49,8 +46,22 @@
   font-size: 1.7rem;
 }
 
+@media screen and (min-width: 360px) {
+  .form > input {
+    width: 12rem;
+    font-size: 1.4rem;
+  }
+  .form > button {
+    font-size: 1.4rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .form > * {
     font-size: 2rem;
+  }
+
+  .form > input {
+    width: initial;
   }
 }
