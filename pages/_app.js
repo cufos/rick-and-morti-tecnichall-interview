@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import '../styles/globals.css'
 // components
 import { Navbar } from '../components/navbar'
+import { Footer } from '../components/footer'
 
 // react queryclient
 const queryClient = new QueryClient()
@@ -13,6 +14,7 @@ function MyApp ({ Component, pageProps }) {
     <QueryClientProvider QueryClientProvider client={queryClient}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </QueryClientProvider>
   )
 }

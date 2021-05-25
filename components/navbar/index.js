@@ -2,7 +2,7 @@ import Link from 'next/link'
 // components
 import { Logo } from '../logo'
 // styles
-import styles from '../../styles/navbar.module.css'
+import styles from './navbar.module.css'
 
 export function Navbar () {
   return (

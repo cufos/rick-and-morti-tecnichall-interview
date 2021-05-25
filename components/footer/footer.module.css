@@ -1,0 +1,26 @@
+.wraper {
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+}
+
+.container > p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  color: var(--blue);
+}
+
+.links {
+  text-decoration: underline;
+  color: var(--light-red);
+  padding: 0 0.6rem;
+}
