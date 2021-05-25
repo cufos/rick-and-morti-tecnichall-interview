@@ -1,0 +1,56 @@
+.wraper {
+  padding: 1rem 3rem;
+  background-color: var(--white);
+  width: 100vw;
+  border-bottom: 0.5rem solid var(--light-red);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: auto;
+}
+
+.logo {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.form > * {
+  font-size: 1.4rem;
+}
+
+.form > input {
+  padding: 0.5rem;
+  border-radius: 1rem 0 0 1rem;
+  border: 0.2rem solid var(--blue);
+  outline: 0;
+}
+
+.form > button {
+  padding: 0.5rem;
+  border: 0.2rem solid var(--blue);
+  border-radius: 0 1rem 1rem 0;
+  background-color: var(--blue);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.form > button:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+}
+
+.form > input::placeholder {
+  color: var(--blue);
+  font-size: 1.7rem;
+}
+
+@media screen and (min-width: 768px) {
+  .form > * {
+    font-size: 2rem;
+  }
+}
