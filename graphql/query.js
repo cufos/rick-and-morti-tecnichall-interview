@@ -1,18 +1,15 @@
 import gql from 'graphql-tag'
-export const GET_CHARACTER = gql`
-query ($name:String!)
-{
-  characters(filter:{name: $name}){
-    results{
+
+export const GET_SINGLE_CHARACTER = gql`
+  query($id:ID!){
+    character(id:$id){
       name
-      status
-      origin{
-        name
-      }
-      type
-      gender
       image
+      episode{
+        name
+        id
+        episode
+      }
     }
   }
-}
 `

@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 
 export function Character ({ id, name, status, origin, gender, type, image }) {
   return (
-    <Link href={`/details/:${id}`}>
+    <Link href={`/details/${id}`}>
       <a className={styles.container}>
         <div className={styles.imageContent}>
           <Image

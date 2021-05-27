@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import Link from 'next/link'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 // components
 import { Logo } from '../icons/Logo'
@@ -12,7 +12,7 @@ export function Navbar () {
   const handleSubmit = e => {
     e.preventDefault()
     setCharacter('')
-    router.push(`/character/:${character}`)
+    router.push(`/character/${character}`)
   }
   return (
     <div className={styles.wraper}>

@@ -1,17 +1,25 @@
 import { useRouter } from 'next/router'
-import { GetCharacter } from '../../graphql/hook'
-import { GET_CHARACTER } from '../../graphql/query'
+// components
+import { Character } from '../../components/character'
+import { Error } from '../../constants/error'
+import { Loading } from '../../constants/loading'
+// styles
+import styles from '../../styles/home.module.css'
+
+// hooks
+import { useSearchCharacter } from '../../hooks/useSearchCharacter'
 
 export default function SingleCharacter () {
   const router = useRouter()
-  const { name } = router.query
-  const character = name.substring(1)
-  const { data, isLoading, error } = GetCharacter('characters', GET_CHARACTER, { name: character })
-  console.log(error)
-  console.log(data)
-  console.log(isLoading)
 
+  const { data, error, loading } = useSearchCharacter({ name: router.query.name })
   return (
-    <h1>Hi there</h1>
+    <div className={styles.wrapper}>
+      {loading && <Loading />}
+      {error && <Error />}
+      {data?.results?.map(res => (
+        <Character key={res.id} {...res} />
+      ))}
+    </div>
   )
 }
